@@ -37,7 +37,15 @@ for($i = 1 ; $i <= 100 ; $i++){
 }
 
 // 問題５
+$alpha = ['E', 'A', 'D', 'B', 'A', 'C', 'A', 'B', 'E', 'E', 'A', 'A', 'C'];
+$i = 0;
 
+foreach ($alpha as $v) {
+    if ($v === 'A') {
+        $i++;
+    }
+}
+echo $i;
 
 echo '<br>';
 
@@ -66,17 +74,20 @@ for($i =1 ; $i <= 9 ; $i++){
 }
 
 // 問題８
-// $total = $i % $j===0;
-// for($i = 2 ; $i <= 10 ; $i++) {
-//     for($j = 2 ; $ <= 10 ; $i++) {
-//         if($i%$j === 0) {
-//             echo $total;
-//         } 
-//     }
-// }
+    $prime = [];
+    for ($i=2; $i < 100 ; $i++) { 
+        for ($j=2; $j <= $i  ; $j++) { 
+            if ($i % $j === 0 && $j < $i) {
+                break;
+            }
+        }
 
+        if($i === $j){
+            $prime[] = $i ;
+        }
+    }
 
-
+    print_r($prime);
 
 
 
